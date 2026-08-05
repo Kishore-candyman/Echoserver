@@ -53,24 +53,21 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 ```
 import socket
 
-HOST = "127.0.0.1"
-PORT = 65432
+HOST = "127.0.0.1"  
+PORT = 65432       
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
-
-    message = input("Enter message: ")
-
-    s.sendall(message.encode())
-
+    s.sendall(b"Kishore M\n212224040161\n05.08.2026")
     data = s.recv(1024)
 
-print("Server replied:", data.decode())
+print("Received from server:\n" + data.decode('utf-8'))
 
 ```
 
 ## OUTPUT:
-<img width="1280" height="800" alt="WhatsApp Image 2026-07-28 at 2 46 17 PM" src="https://github.com/user-attachments/assets/80b00667-10f6-419f-b2d2-63a3688122e9" />
+<img width="1908" height="1193" alt="image" src="https://github.com/user-attachments/assets/2cc24cf1-bbd3-44be-a814-82547ff461a7" />
+
 
 
 ## RESULT:
